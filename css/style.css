@@ -1,33 +1,38 @@
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
 body {
     display: flex;
     flex-direction: column;
-    min-height: 100%;
+    min-height: 100vh;
 }
 
+
 header {
-    background: hsl(210, 98%, 25%);
+    background: #07072e;
+    border: solid 1px #0a0a35;
     color: white;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 30px;
-    border: solid 1px #03000c;
+    padding: 22px 30px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
-.logo {
-    position: absolute;
-}
-.logo img{
+.logo img {
     width: 70px;
 }
-.menu{
+
+
+.menu {
     margin: 0 auto;
     display: flex;
     gap: 20px;
-    
 }
-.menu a{
+
+.menu a {
     text-decoration: none;
     font-weight: bold;
     color: white;
@@ -38,32 +43,33 @@ main {
     padding: 20px;
 }
 
-.lancamento {
+.telaRanger {
     text-align: center;
 }
 
-.lancamento img {
+.telaRanger img {
     border: solid 2px rgb(14, 84, 159);
-    box-shadow: black 10px 10px 15px 5px;
-    width: 100%;
-    max-width: 900px;
+    box-shadow: black 0px 10px 50px 10px;
+    max-width: 100%;
+    height: 650px;
     margin: 20px 0;
 }
-.informacao{
+
+.informacao {
     display: flex;
     width: 100%;
-    height: 100%;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between; /* melhor que center */
 }
-.teste{
+
+.teste {
     color: azure;
     display: flex;
     align-items: center;
-    width: 100%;
-    height: 50px;
-    border: solid 1px black;
+    width: 60%;
+    min-height: 50px;
 }
+
 
 .produtos {
     display: flex;
@@ -73,7 +79,6 @@ main {
     margin-top: 30px;
 }
 
-
 .produtos img {
     width: 250px;
     border-radius: 10px;
@@ -82,36 +87,45 @@ main {
 footer {
     display: flex;
     align-items: center;
-    background-color: rgb(4, 4, 249);
-    text-align: center;
-    padding: 15px;
+    justify-content: space-between;
+    background-color: #07072e;
+    padding: 15px 30px;
+    flex-wrap: wrap; /* ajuda no responsivo */
 }
-.redeSociais{
+
+/* BLOCO ESQUERDA (redes) */
+.redes-container {
     display: flex;
     align-items: center;
-    text-align: center;
-    color: azure;
-    border: solid 1px black;
-    width: 115px;
-    height: 50px;
-}
-.logo2{
-    border: solid 1px black;
-    width: 128px;
+    gap: 10px;
 }
 
-.redes{
+.redeSociais {
+    color: white;
+    font-weight: bold;
+}
 
+.redes {
     display: flex;
-    align-items: center;
-    height: 50px;
-    width: 180px;
-    margin-right: 10px;
+    gap: 10px;
 }
 
-.redes img{
-   width: 30px;
-   margin-left: 10px;
+.redes img {
+    width: 45px;
+}
+
+
+.texto {
+    position: static;
+    color: white;
+    text-align: center;
+    flex: 1;
+
+}
+
+.logo2 {
+    position: static;
+    width: 90px;
 }
 
 @media (max-width: 768px) {
@@ -120,8 +134,20 @@ footer {
         flex-direction: column;
     }
 
-    nav {
+    .menu {
         margin-top: 10px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .informacao {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+
+    .teste {
+        width: 100%;
     }
 
     .produtos {
