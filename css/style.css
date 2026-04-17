@@ -11,6 +11,7 @@ body {
 
 
 header {
+    box-shadow: 0px 0px 10px 3px black;
     background: #07072e;
     border: solid 1px #0a0a35;
     color: white;
@@ -32,7 +33,7 @@ header {
     gap: 20px;
 }
 
-.menu a {
+.menu a{
     text-decoration: none;
     font-weight: bold;
     color: white;
@@ -44,7 +45,41 @@ main {
 }
 
 .telaRanger {
+    position: relative;
+    max-width: 1400px;
+    margin: 0 auto;
+
+}
+.telaRanger img{
+    width: 100%;
+    display: block;
+}
+.img-container{
+    position: relative;
+    width: 100%;
+    max-width: 1400px;
+    display: block;
+    margin: 0 auto;
+}
+
+
+.titulo{
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+
+    width: 97%;
+
+    background: rgba(6, 17, 67, 0.6);
+    color: white;
+
     text-align: center;
+
+    font-size: clamp(20px, 4vw, 40px);
+    padding: 10px 20px;
+
+    border-radius: 10px;
 }
 
 .telaRanger img {
@@ -55,33 +90,12 @@ main {
     margin: 20px 0;
 }
 
-.informacao {
-    display: flex;
-    width: 100%;
-    align-items: center;
-    justify-content: space-between; /* melhor que center */
-}
-
 .teste {
     color: azure;
     display: flex;
     align-items: center;
     width: 60%;
     min-height: 50px;
-}
-
-
-.produtos {
-    display: flex;
-    gap: 20px;
-    justify-content: center;
-    flex-wrap: wrap;
-    margin-top: 30px;
-}
-
-.produtos img {
-    width: 250px;
-    border-radius: 10px;
 }
 
 footer {
@@ -93,7 +107,6 @@ footer {
     flex-wrap: wrap; /* ajuda no responsivo */
 }
 
-/* BLOCO ESQUERDA (redes) */
 .redes-container {
     display: flex;
     align-items: center;
@@ -114,6 +127,35 @@ footer {
     width: 45px;
 }
 
+.box-text{
+    box-shadow: 0px 0px 10px 5px black;
+    width: 76%;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+
+.textCar {
+   display: inline-block;
+   white-space: nowrap;
+   color: #0a0a35;
+   font-size: 20px;
+   animation: passarTexto 10s linear infinite;
+}
+@keyframes passarTexto{
+    0%{
+        transform: translate(100%);
+    }
+    100%{
+        transform: translate(-100%);
+    }
+}
 
 .texto {
     position: static;
@@ -138,20 +180,5 @@ footer {
         margin-top: 10px;
         flex-wrap: wrap;
         justify-content: center;
-    }
-
-    .informacao {
-        flex-direction: column;
-        gap: 10px;
-        text-align: center;
-    }
-
-    .teste {
-        width: 100%;
-    }
-
-    .produtos {
-        flex-direction: column;
-        align-items: center;
     }
 }
